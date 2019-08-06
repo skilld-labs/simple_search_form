@@ -1,0 +1,31 @@
+block.settings.simple_search_form_block:
+  type: block_settings
+  label: 'Simple search form block'
+  mapping:
+    action_path:
+      type: path
+      label: 'Path'
+    get_parameter:
+      type: string
+      label: 'GET parameter'
+    input_type:
+      type: string
+      label: 'Input element type'
+    input_label:
+      type: label
+      label: 'Search label'
+    input_label_display:
+      type: string
+      label: 'Label display mode'
+    input_placeholder:
+      type: label
+      label: 'Search placeholder'
+    input_css_classes:
+      type: string
+      label: 'Search CSS classes'
+    submit_display:
+      type: boolean
+      label: 'Display submit button'
+    submit_label:
+      type: label
+      label: 'Submit label'

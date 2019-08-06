@@ -1,0 +1,6 @@
+name: 'Simple search form'
+type: module
+description: 'Implements search form block for redirecting to a path with a parameter.'
+package: Search
+
+core: 8.x

@@ -1,0 +1,10 @@
+{
+  "name": "skilld/simple_search_form",
+  "description": "Implements a search form block for redirecting to a path with a parameter.",
+  "type": "drupal-module",
+  "keywords": ["Drupal", "Search", "Form"],
+  "license": "MIT",
+  "require": {
+    "drupal/core": "~8"
+  }
+}
