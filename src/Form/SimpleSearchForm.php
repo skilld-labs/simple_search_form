@@ -4,6 +4,7 @@ namespace Drupal\simple_search_form\Form;
 
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Url;
 
 /**
  * SimpleSearchForm definition.
@@ -22,7 +23,7 @@ class SimpleSearchForm extends FormBase {
    */
   public function buildForm(array $form, FormStateInterface $form_state, array $config = []) {
     $form['#method'] = 'get';
-    $form['#action'] = $config['action_path'];
+    $form['#action'] = Url::fromUserInput($config['action_path'])->toString();
     $form['#token'] = FALSE;
 
     $form[$config['get_parameter']] = [
