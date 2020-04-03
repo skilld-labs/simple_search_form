@@ -1,3 +1,9 @@
+# Deprecation notice
+
+This module has been moved to https://www.drupal.org/project/simple_search_form
+
+Do not use this repo anymore
+
 # Simple search form
 
 This module implements a simple search form with input and submit button.
