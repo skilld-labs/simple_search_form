@@ -85,7 +85,7 @@ class SimpleSearchFormBlock extends BlockBase implements ContainerFactoryPluginI
     $form['action_path'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Path'),
-      '#description' => $this->t('The path to redirect to.'),
+      '#description' => $this->t('The path to redirect to. Should start with a slash.'),
       '#required' => TRUE,
       '#default_value' => $this->configuration['action_path'],
     ];
@@ -146,6 +146,16 @@ class SimpleSearchFormBlock extends BlockBase implements ContainerFactoryPluginI
     ];
 
     return $form;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function blockValidate($form, FormStateInterface $form_state) {
+    $action_path = $form_state->getValue('action_path');
+    if ($action_path[0] !== '/') {
+      $form_state->setErrorByName('action_path', $this->t('Path should start with a slash.'));
+    }
   }
 
   /**
